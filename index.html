@@ -5,6 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script>
+        dataLayer = [{
+            'pageCategory': 'signup',
+            'visitorType': 'high-value'
+        }];
+    </script>
+
     <!-- Google Tag Manager -->
     <script>(function (w, d, s, l, i) {
             w[l] = w[l] || []; w[l].push({
@@ -22,7 +29,7 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K69MBRH" height="0" width="0"
             style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    按钮
+    <a href="#" name="button1" onclick="dataLayer.push({'event': 'button1-click'});" >Button 1</a>
 </body>
 
 </html>
