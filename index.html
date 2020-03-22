@@ -57,11 +57,11 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K69MBRH" height="0" width="0"
             style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <a href="#" name="button1" onclick="dataLayer.push({
-        'event' : 'APAgentCode',
-        'AgentCode': Math.random(),
-        'StepName':'Login' ,
-        });">Button 1</a>
+    <a href="#" name="button1" onclick="gtag('event', 'APAgentCode', {
+        'event_label': 'My promotional video',
+        'event_category': 'video_auto_play',
+        'non_interaction': true
+      });">Button 1</a>
 </body>
 
 </html>
