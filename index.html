@@ -17,11 +17,21 @@
 </head>
 
 <body>
-    <a href="#" name="button1" onclick="gtag('event', 'APAgentCode', {
-        'event_label': 'My promotional video',
-        'event_category': 'video_auto_play',
-        'non_interaction': true
-      });">Button 1</a>
+    <button id="button1">Button 1</a>
+        <script>
+            document.getElementById('button1').onclick = () => {
+                console.log(1234);
+                gtag('event', 'APAgentCode', {
+                    'event_label': 'My promotional video',
+                    'event_category': 'video_auto_play',
+                    'non_interaction': true
+                });
+                gtag('event', 'aaa', {
+                    'event_category': 'bbb',
+                    'event_label': 'ccc'
+                });
+            };
+        </script>
 </body>
 
 </html>
