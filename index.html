@@ -33,6 +33,23 @@
                     'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
         })(window, document, 'script', 'dataLayer', 'GTM-K69MBRH');</script>
     <!-- End Google Tag Manager -->
+    <script>
+        // dataLayer = [{
+        //     'pageCategory': 'signup',
+        //     'visitorType': 'high-value'
+        // }];
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID');
+        // Configure a target
+        gtag('config', 'GA_MEASUREMENT_ID_1');
+        gtag('config', 'GA_MEASUREMENT_ID_2', { 'groups': 'agency' });
+        gtag('config', 'GA_MEASUREMENT_ID_3', { 'groups': 'agency' });
+
+        // Route this sign_in event to Analytics IDs in the 'agency' group:
+        gtag('event', 'sign_in', { 'send_to': 'agency' });
+    </script>
 </head>
 
 <body>
