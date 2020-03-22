@@ -29,7 +29,11 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K69MBRH" height="0" width="0"
             style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <a href="#" name="button1" onclick="dataLayer.push({'event': 'button1-click'});" >Button 1</a>
+    <a href="#" name="button1" onclick="dataLayer.push({
+        'event' : 'APAgentCode',
+        'AgentCode': 'XXXXX',
+        'StepName':'Login' ,
+        });">Button 1</a>
 </body>
 
 </html>
