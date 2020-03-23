@@ -9,10 +9,11 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-161061635-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
+        console.log(dataLayer);
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
 
-        gtag('config', 'GA_MEASUREMENT_ID');
+        gtag('config', 'UA-161061635-1');
     </script>
 </head>
 
@@ -26,7 +27,7 @@
                     'event_category': 'video_auto_play',
                     'non_interaction': true
                 });
-                gtag('event', 'aaa', {
+                gtag('event', 'login', {
                     'event_category': 'bbb',
                     'event_label': 'ccc'
                 });
