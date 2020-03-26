@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-161061635-1"></script>
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-161061635-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         console.log(dataLayer);
@@ -14,29 +14,110 @@
         gtag('js', new Date());
 
         gtag('config', 'UA-161061635-1');
-    </script>
+    </script> -->
+
+
+
+    <!-- Google Tag Manager -->
+<script>
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-K69MBRH');
+    
+</script>
+    <!-- End Google Tag Manager -->
 </head>
 
 <body>
-    <button id="button1">Button 1</a>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K69MBRH" height="0" width="0" style="display:none;visibility:hidden"><iframe>
+    </noscript>
+    
+    <!-- End Google Tag Manager (noscript) -->
+    <button id="button1">Button 1</button><hr />
+    <button id="myAppName">Customer Facing Screen</button><hr />
+    <button id="login">Login</button>
+    <button id="SetpName">SetpName</button>
+    
         <script>
+            document.getElementById('login').onclick = () => {
+                window.dataLayer.push({
+                    event: 'LLogin',
+                    code: 12345,
+                    AgentCode: 'Agent12345',
+                    StepName: 'stepstepstep',
+                    param: {
+                        a:1,
+                        b:2
+                    }
+                });
+            }
+            document.getElementById('SetpName').onclick = () => {
+                window.dataLayer.push({
+                    event: 'SetpName',
+                    code: 67890,
+                    AgentCode: 'Agent12345',
+                    StepName: 'SetpNameSetpNameSetpName',
+                    param: {
+                        a:1111,
+                        b:2222
+                    }
+                })}
+
+        </script>
+        <!-- <script>
             document.getElementById('button1').onclick = () => {
                 console.log(1234);
                 gtag('event', 'APAgentCode', {
                     'event_label': 'My promotional video',
                     'event_category': 'video_auto_play',
+
                     'non_interaction': true
                 });
                 gtag('event', 'login', {
-                    'event_category': 'bbb',
-                    'event_label': 'ccc'
+                    'event_label': 'ccc',
+                    'event_category': 'login'
                 });
                 gtag('event', 'screen_view', {
                     'app_name': 'myAppName',
                     'screen_name': 'Home'
                 });
             };
-        </script>
+            
+            
+            document.getElementById('myAppName').onclick = () => {
+                gtag('event', 'CustomerFacingScreen', {
+                    'event_label': 'Customer Facing Screen',
+                    'event_category': 'Customer Facing Screen',
+                    'event_value': 12345,
+                    'checkout_option': 'checkout_option1111',
+                    'promotions': ['a', 'b', 'c'],
+                    'shipping': 'shipping111'
+
+                });
+               
+                // });
+            };
+            document.getElementById('Test').onclick = () => {
+
+                gtag('event', 'Login2222', { 
+                    'event_category': 'CAT',
+                    'event_label': 'lABEL',
+                    'event_value': '动态的Code',
+                    'content_type': 'content_type',
+                    'content_id': 'content_id',
+                    'checkout_step': 'checkout_step',
+                    'checkout_option':'checkout_option',
+                    'StepName': 'stepppppp',
+                    'non_interaction': true
+                });
+            };
+
+
+        </script> -->
 </body>
 
 </html>
