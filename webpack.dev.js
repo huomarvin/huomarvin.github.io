@@ -9,16 +9,24 @@ module.exports = {
     rules: [
       //     { test: /\.tsx?$/, loader: "ts-loader" },
       {
-        test: /\.js$/,
+        test: /\.jsx?$/,
         exclude: /(node_modules|bower_components)/,
-        use: [
-          'babel-loader', {
-            loader: 'eslint-loader',
-            options: {
-              fix: true,
-            },
+        use: {
+          loader: 'babel-loader',
+        },
+      },
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
+      },
+      {
+        test: /\.less$/,
+        use: ['style-loader', 'css-loader', {
+          loader: 'less-loader',
+          options: {
+            javascriptEnabled: true,
           },
-        ],
+        }],
       },
     ],
   },
